@@ -1,0 +1,101 @@
+/* Цвет фона */
+@color-base:#fff;
+@color-about:#16A086;
+@color-contact:#ECF0F1;
+@color-footer:#2D3E50;
+@color-down:#383433;
+/* Цвет текста */
+@pen-white:#fff;
+@pen-black:#000;
+/* Размеры */ 
+@fs:12pt; /*font-size*/
+@ss:100%; /*размер сайта*/ 
+@base-ind:5pt;
+
+/*== Примеси, сами не выводятся ==*/
+.flex-display(){
+	display:flex;
+	display:-webkit-flex;
+	display:-moz-flex;
+	display:-ms-flex;
+}
+.flex-inline-display(){
+	display:inline-flex;
+	display:-webkit-inline-flex;
+	display:-moz-inline-flex;
+	display:-ms-inline-flex;
+}
+
+.flex-justify-align(){
+	justify-content:space-between;
+	-webkit-justify-content:space-between;
+	-moz-justify-content:space-between;
+	-ms-justify-content:space-between;
+}
+
+.flex-flex-direction(){
+	flex-direction:column;
+	-webkit-flex-direction:column;
+	-moz-flex-direction:column;
+	-ms-flex-direction:column;
+}
+//=====================================================
+.about-str(){
+	.flex-display();
+	background:@color-about;
+	color:@pen-white;	
+	margin: 0 0 @base-ind*12 0;
+	padding-top:@ss / 15;
+	
+}
+//=====================================================
+mark,.select{
+	font-weight:bold;
+	font-size:@fs*1.1;
+	padding:@base-ind;
+}
+
+header {
+	position:fixed;
+
+	z-index:1;
+}
+
+mark{
+	background:@color-base;
+	opacity:0.9;
+	color:lighten(@pen-black,30%);
+}
+
+section:not(:last-child){
+	border-bottom:1px solid @pen-white;
+}
+
+.about{
+	.about-str();
+	
+}
+
+#resume{
+	margin:@base-ind;
+	padding:@base-ind;
+	text-align:justify;
+	width:@ss - @ss/4;	
+}
+
+.about>aside {
+	margin:@base-ind;
+	padding:@base-ind;
+	text-align:center;	
+	position:fixed;
+	width:@ss/5;
+	top:@ss/5;
+}
+.about>aside>h3>a {
+	color:@pen-white;
+}
+
+
+
+
+

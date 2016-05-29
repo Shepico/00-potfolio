@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8";
+				lang="ru"/>
+		<title>	Личный сайт-резюме</title>
+		<!--Подключаем Less -->
+		<link rel="stylesheet/less" type="text/css" href="style/style.less" />
+		<link rel="stylesheet/less" type="text/css" href="style/contact.less" />
+        <script src="lessJS/less.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<header>
+			<div id="logo">
+				<a href="index.html"><img src="resources/logo.gif" width="80pt" height="80pt"/></a>
+				<div class="box-flex">
+					<h1>Shepico</h1>
+					<h4>Прекращение деятельности всегда приводит за собой вялость</h4>				
+				</div>	
+			</div>
+			<nav>
+				<ul class="menu" id="main">
+					<li><a href="index.html">ГЛАВНАЯ</a></li>  
+					<li><a href="portfolio.html">ПОРТФОЛИО</a></li>  
+					<li><a href="about.html">ОБО МНЕ</a></li>  
+					<li><a href=#>КОНТАКТЫ</a></li>  
+				</ul>
+			</nav>
+		</header>	
+		<article class="contact">
+			<h1>Написать мне</h1>
+			<div class="string-block">
+				<form action="/script/send2.php" method="post">
+					<div class="string-block">
+						<input type="text" placeholder="Ваше имя" name="fio">
+						<input type="email" placeholder="Ваш E-mail" name="fmail">
+					</div>
+					<textarea placeholder="Ваше сообщение" rows=18 name="mess"></textarea>
+					<input class="button" type="submit" name="submit">				
+				</form>
+				<section id="contacts">
+					Благодарю Вас за желание написать мне письмо.
+					Я являюсь прекрасным сотрудником, который мотивирован на получение новых знаний.
+					Я целеустремлен, контактен и обучаем.
+				</section>
+			</div>	
+		</article>
+		<footer>
+			<div id="footer-left">&copy Shepico</div>
+			<div id="footer-right">2016</div>
+		</footer>
+	</body>
+</html>

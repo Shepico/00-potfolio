@@ -1,0 +1,152 @@
+/* Цвет фона */
+@color-base:#fff;
+@color-about:#16A086;
+@color-contact:#ECF0F1;
+@color-footer:#2D3E50;
+@color-down:#383433;
+/* Цвет текста */
+@pen-white:#fff;
+@pen-black:#000;
+/* Размеры */ 
+@fs:12pt; /*font-size*/
+@ss:100%; /*размер сайта*/ 
+@base-ind:5pt;
+
+/*== Примеси, сами не выводятся ==*/
+.flex-display(){
+	display:flex;
+	display:-webkit-flex;
+	display:-moz-flex;
+	display:-ms-flex;
+}
+.flex-inline-display(){
+	display:inline-flex;
+	display:-webkit-inline-flex;
+	display:-moz-inline-flex;
+	display:-ms-inline-flex;
+}
+
+.flex-justify-align(){
+	justify-content:space-between;
+	-webkit-justify-content:space-between;
+	-moz-justify-content:space-between;
+	-ms-justify-content:space-between;
+}
+
+.flex-flex-direction(){
+	flex-direction:column;
+	-webkit-flex-direction:column;
+	-moz-flex-direction:column;
+	-ms-flex-direction:column;
+}
+/*==============================*/
+.main-block(@bgc:@color-base){ /*Начальные данные шапки и подвала*/
+	.flex-display();
+	.flex-justify-align();
+	width:@ss;
+	height:@ss / 10;
+	background:@bgc;
+
+}
+
+.scheme-menu (@bgcolor:@color-base){
+	.flex-inline-display();
+	padding:0 @base-ind;
+	/*padding:1%;*/
+	background:@bgcolor;
+}
+
+.sm-link(@fs:75%;@ccolor:@pen-black){
+	/*	fs - размер шрифта
+		ccolor - цвет ссылки
+	*/
+	font-size:@fs;
+	color:@ccolor;
+	text-decoration:none;
+}
+
+.sm-link-hover(@ccolor:@pen-white;@bgcolor:@color-about){
+	color:@ccolor;
+	background:@bgcolor;
+}
+
+.footer-text(){
+	.flex-inline-display();
+	margin:auto @base-ind*5;
+	font-size:@fs*1.5
+}
+/*================================*/
+/*body{*/
+html, body { 
+	width:@ss;
+	height:@ss;
+	background:@color-base;
+	margin:auto;
+	font-size:@fs;
+}
+
+/*	Шапка	*/
+header{
+	.main-block();		
+	
+}
+
+h1{
+	font-size:@fs*3;
+	margin:auto;
+}
+
+#logo{
+	.flex-display();
+	margin:auto 0;
+}
+
+#logo>a{
+	.flex-inline-display();
+	margin:auto @base-ind;
+}	
+.box-flex{
+	display:block;
+	margin:auto;
+}
+.box-flex>h1, .box-flex>h4{
+	margin:auto;
+}
+
+/*Общие для меню*/
+/*Главное меню*/
+header>nav{
+	.flex-display();
+	margin:auto @base-ind*5;
+}
+#main{
+	.flex-display();
+}
+#main>li{
+	.scheme-menu();
+
+}
+#main>li>a{
+	.sm-link(90%,@pen-black);
+	
+}
+#main>li:hover{
+	.sm-link-hover();
+}
+#main>li:hover a{
+  color:@pen-white; 
+}
+
+/*=======================*/
+footer{
+	.main-block(@color-footer);
+	position:fixed;
+	left:0;
+	bottom:0;
+	color:@pen-white;	
+}
+
+#footer-left, #footer-right{
+	.flex-inline-display();
+	.footer-text();
+}
