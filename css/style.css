@@ -16,9 +16,7 @@ img {
 
 body {
   font-family: 'Roboto Slab', "Tahoma", serif;
-  /*width: 100%;
-  height: 100%;*/
-  min-width: 1020px;
+  width: 1020px;
   margin: auto;
   font-size: 14px;
   line-height: 16px;
@@ -27,25 +25,9 @@ body {
 }
 /*	Шапка	*/
 header {
-  
-  /*Начальные данные шапки и подвала*/
-  /*display: flex;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  justify-content: space-between;
-  -webkit-justify-content: space-between;
-  -moz-justify-content: space-between;
-  -ms-justify-content: space-between;*/
-  /*width: 100%;*/
   height: 35px;
   margin: 30px 40px;
-  /*background: #fff;*/
 }
-/*h1 {
-  font-size: 36pt;
-  margin: auto;
-}*/
 
 ul {
   text-transform: uppercase;
@@ -55,9 +37,7 @@ ul {
 .header-logo {
   float: left;
   display: inline-block;
-  /*width: 250px;*/
   vertical-align: middle;
-  /*background-color: green;*/
 }
 
 .header-logo>a {
@@ -157,34 +137,40 @@ ul {
   display: inline-block;
   width: 180px;
   height: 180px;
-  margin-right: 65px;
+  margin-right: 55px;
   margin-left: -0.25em;
   margin-bottom: 34px; 
   background-color: #fff;
   border-radius: 50%; 
-  /*border: 1px solid black;*/
+}
+
+.item-portfolio a{
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .item-portfolio:nth-child(4n) {
   margin-right: 0;  
 }
 
+.portfolio-items > section:nth-of-type(1) {
+  background: url("../img-maket/maket1.jpg");
+}
+
+.portfolio-items > section:nth-of-type(2) {
+  background: url("../img-maket/maket2.jpg");
+}
+
+.portfolio-items > section:nth-of-type(3) {
+  background: url("../img-maket/maket3.jpg");
+}
+
 /*=======================*/
 /*Подвал*/
 footer {
-  /*Начальные данные шапки и подвала*/
-  /*display: flex;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  justify-content: space-between;
-  -webkit-justify-content: space-between;
-  -moz-justify-content: space-between;
-  -ms-justify-content: space-between;
-  width: 100%;*/
   height: 46px;
   padding: 21px 40px;
-
   background-color: #2d3e50;
   color: #fff;
 }
@@ -222,11 +208,12 @@ footer {
   height: 16px;     
   border-left: 4px solid #fff;  
   border-top: 4px solid #fff; 
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg); 
+          transform: rotate(45deg);
 
 }
-/*about*/
 
+/*about*/
 .about{
   padding: 40px 0;
   line-height: 20px;
@@ -240,7 +227,7 @@ footer {
 
 .about-resume {
   float: left;
-  width: 70%;
+  width: 65%;
   padding-left: 40px;
   padding-right: 20px;    
 }
@@ -291,18 +278,10 @@ footer {
   color: #fff;
 }
 
-/*.resume-item {
-  border-bottom: 1px solid #fff;
-}
-.resume-item h2 {
-  margin: 0;
-  padding: 0;  
-}*/
 .about-content-section {
-  display: inline-block;
-  padding-left: 20px;
+  display: block;
+  margin-left: 80px;
 }
-
 
 .resume-item-work {
   padding: 5px 0 5px 20px;
@@ -323,225 +302,5 @@ footer {
   margin: 5px 0;
   font-weight: bold;
   text-transform: uppercase;
-  
-}
-
-
-/*.figure-up:after{
-  border-left: 2px solid #fff;  
-}
-
-.figure-up:before{
-  border-top: 2px solid #fff;  
-}
-
-/*#logo {
-  display: flex;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  margin: auto 0;
-}
-#logo > a {
-  display: inline-flex;
-  display: -webkit-inline-flex;
-  display: -moz-inline-flex;
-  display: -ms-inline-flex;
-  margin: auto 5pt;
-}
-.box-flex {
-  display: block;
-  margin: auto;
-}
-.box-flex > h1,
-.box-flex > h4 {
-  margin: auto;
-}*/
-/*Общие для меню*/
-/*Главное меню*/
-/*header > nav {
-  display: flex;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  margin: auto 25pt;
-}
-/*#main {
-  display: flex;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-}
-#main > li {
-  display: inline-flex;
-  display: -webkit-inline-flex;
-  display: -moz-inline-flex;
-  display: -ms-inline-flex;
-  padding: 0 5pt;
-  /*padding:1%;
-  background: #fff;
-}
-#main > li > a {
-  /*	fs - размер шрифта
-		ccolor - цвет ссылки
-	
-  font-size: 90%;
-  color: #000;
-  text-decoration: none;
-}
-#main > li:hover {
-  color: #fff;
-  background: #16A086;
-}
-#main > li:hover a {
-  color: #fff;
-}*/
-
-/*#footer-left,
-#footer-right {
-  display: inline-flex;
-  display: -webkit-inline-flex;
-  display: -moz-inline-flex;
-  display: -ms-inline-flex;
-  margin: auto 25pt;
-  font-size: 18pt;
-}
-
-/*index.html*/
-/* Цвет фона */
-/* Цвет текста */
-/* Размеры */
-/*font-size*/
-/*размер сайта*/
-/*== Примеси, сами не выводятся ==*/
-/* Основная страница */
-/*.mainpage {
-  display: flex;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  flex-direction: column;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  background: url(../resources/bg_image.jpg) no-repeat;
-  background-size: cover;
-  height: 80%;
-}
-.slogan {
-  font-size: 96pt;
-  margin: auto;
-  color: #fff;
-}
-.mainpage > a {
-  width: 125pt;
-  height: 50pt;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 250%;
-  background: #16A086;
-  color: #fff;
-  font-size: 18pt;
-  text-decoration: none;
-  margin: auto;
-}
-.contact-jump {
-  width: 50pt;
-  height: 50pt;
-  border-radius: 50%;
-  background: #fff;
-  margin: auto;
-}
-.contact-jump > a {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-#bop {
-  width: 10pt;
-  height: 10pt;
-  border-style: solid;
-  border-width: 10pt;
-  border-color: transparent #383433 #383433 transparent;
-  transform: rotate(45deg);
-  margin: 5pt auto;
-}*/
-
-/*Меню Портфолио*/
-/*.portfolio {
-  background: #ECF0F1;
-  display: flex;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  flex-direction: column;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  height: 80%;
-}
-.portfolio > h1 {
-  margin: auto;
-}
-.portfolio > nav {
-  display: none;
-  margin: auto;
-}
-.portfolio > nav > ul {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-#portfolio > li {
-  display: block;
-  display: inline-flex;
-  display: -webkit-inline-flex;
-  display: -moz-inline-flex;
-  display: -ms-inline-flex;
-  padding: 0 5pt;
-  background: #16A086;
-}
-#portfolio > li > a {
-  display: block;
-  /*	fs - размер шрифта
-		ccolor - цвет ссылки
-	
-  font-size: 125%;
-  color: #fff;
-  text-decoration: none;
-}
-#portfolio > li > a:hover {
-  background: #12816c;
-}
-#one-str,
-#two-str {
-  margin: auto;
-}
-#one-str > section,
-#two-str > section {
-  /* 	@w -ширина
-		@h -высота 
-  display: inline-block;
-  width: 125pt;
-  height: 125pt;
-  border-radius: 50%;
-  border: 1px solid black;
-  margin: 25pt;
-}
-#one-str > section > a,
-#two-str > section > a {
-  display: block;
-  height: 100%;
-  width: 100%;
-}
-#one-str > section:nth-of-type(1) {
-  background: url("../img-maket/maket1.jpg");
-}
-
-#one-str > section:nth-of-type(2) {
-  background: url("../img-maket/maket2.jpg");
-}
-
-#one-str > section:nth-of-type(3) {
-  background: url("../img-maket/maket3.jpg");
+  text-decoration: underline;  
 }
