@@ -1,24 +1,179 @@
-/* Цвет фона */
-/* Цвет текста */
-/* Размеры */
-/*font-size*/
-/*размер сайта*/
-/*== Примеси, сами не выводятся ==*/
-/*==============================*/
-/*================================*/
-/*body{*/
-html,
+/*вспомогательные классы*/
+
+/*чтобы картинки не уходили за границы*/
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*Класс для того, чтобы контейнер float разметки "видел" их */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/*КОНЕЦ Вспомогательны классы*/
+
 body {
-  width: 100%;
-  height: 100%;
-  background: #fff;
+  font-family: 'Roboto Slab', "Tahoma", serif;
+  /*width: 100%;
+  height: 100%;*/
+  min-width: 1020px;
   margin: auto;
-  font-size: 12pt;
+  font-size: 14px;
+  line-height: 16px;
+  background: #fff;
+  color: #000;  
 }
 /*	Шапка	*/
 header {
+  
   /*Начальные данные шапки и подвала*/
-  display: flex;
+  /*display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;*/
+  /*width: 100%;*/
+  height: 35px;
+  margin: 30px 40px;
+  /*background: #fff;*/
+}
+/*h1 {
+  font-size: 36pt;
+  margin: auto;
+}*/
+
+ul {
+  text-transform: uppercase;
+}
+
+/*шапка*/
+.header-logo {
+  float: left;
+  display: inline-block;
+  /*width: 250px;*/
+  vertical-align: middle;
+  /*background-color: green;*/
+}
+
+.header-logo>a {
+  text-decoration: none;
+  color: #000;
+}
+
+
+.header-menu {
+  float: right;
+}
+.logo-img {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  vertical-align: top;  
+  
+}
+
+.header-slogan {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+}
+
+.header-slogan>span {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 28px;
+  
+}
+
+.header-menu-ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header-menu-ul>li {
+  display: inline-block;
+  vertical-align: top;  
+}
+
+.header-menu-ul a {
+  display: inline-block;
+  padding: 12px;
+  text-decoration: none;
+  vertical-align: top;
+  color: #000;
+}
+
+.header-menu-ul a:hover {
+  background-color: #1bbc9b;
+  color: #fff;
+}
+
+/*если на этой странице, то span */
+.header-menu-ul span {
+  display: inline-block;
+  padding: 12px;  
+  vertical-align: top;
+  color: #000;
+}
+
+.header-menu-ul span:hover {
+  background-color: #1bbc9b;
+  color: #fff;
+}
+
+/*Portfoloio*/
+.portfolio {  
+  min-height: 635px;  
+  padding-top: 50px;
+  background-color: #1bbc9b;  
+}
+
+.portfolio>h1 {
+  display: block;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 50px;
+  font-size: 28px;
+  line-height: 34px;
+  text-align: center;
+}
+
+.portfolio-items {
+  margin: auto;
+  padding: 0 65px;
+  padding-top: 40px;
+  text-align: center;
+}
+  
+.item-portfolio {
+  display: inline-block;
+  width: 180px;
+  height: 180px;
+  margin-right: 65px;
+  margin-left: -0.25em;
+  margin-bottom: 34px; 
+  background-color: #fff;
+  border-radius: 50%; 
+  /*border: 1px solid black;*/
+}
+
+.item-portfolio:nth-child(4n) {
+  margin-right: 0;  
+}
+
+/*=======================*/
+/*Подвал*/
+footer {
+  /*Начальные данные шапки и подвала*/
+  /*display: flex;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -26,20 +181,161 @@ header {
   -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
   -ms-justify-content: space-between;
+  width: 100%;*/
+  height: 46px;
+  padding: 21px 40px;
+
+  background-color: #2d3e50;
+  color: #fff;
+}
+
+.footer-copyright {
+  float: left;
+  margin: 0;
+  padding: 0;
+  line-height: 46px;
+  vertical-align: top;
+  
+}
+
+.footer-up {
+  position: relative;
+  float: right;
+  width: 46px;
+  height: 46px;
+
+  background-color: #1bbc9b;
+}
+
+.footer-up a{
   width: 100%;
-  height: 10%;
-  background: #fff;
-}
-h1 {
-  font-size: 36pt;
-  margin: auto;
+  height: 100%;
+  display: block;  
+  text-decoration: none;
 }
 
-ul {
+.figure-up {
+  position: absolute;
+  top: 19px;
+  left: 13px;
+  width: 16px;
+  height: 16px;     
+  border-left: 4px solid #fff;  
+  border-top: 4px solid #fff; 
+  transform: rotate(45deg);
+
+}
+/*about*/
+
+.about{
+  padding: 40px 0;
+  line-height: 20px;
+  background-color: #1bbc9b;
+  color: #fff;
+}
+
+.b-block{
+  display: block;
+}
+
+.about-resume {
+  float: left;
+  width: 70%;
+  padding-left: 40px;
+  padding-right: 20px;    
+}
+
+.about-resume h2{
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.about-resume p{
+  margin: 0;
+  padding: 0;  
+  margin-bottom: 10px;
+}
+
+.about-resume-aside {
+  float: right;  
+  width: 20%;
+  padding-left: 20px;  
+  padding-right: 40px;
+  text-align: center;
+}
+
+.about-resume-aside>h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 28px;
+  line-height: 36px;
+}
+
+.about-resume-aside>h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  line-height: 28px;
+
+}
+
+.about-resume-aside a {
+  display: inline-block;
+  font-size: 28px;
+  line-height: 36px;
+  text-decoration: none;
+  color: #fff;
+}
+
+/*.resume-item {
+  border-bottom: 1px solid #fff;
+}
+.resume-item h2 {
+  margin: 0;
+  padding: 0;  
+}*/
+.about-content-section {
+  display: inline-block;
+  padding-left: 20px;
+}
+
+
+.resume-item-work {
+  padding: 5px 0 5px 20px;
+  border-bottom: 1px dashed #fff;
+}
+
+.resume-item-work ul {
+  text-transform: none; 
+}
+
+.iw-date {
+  font-weight: bold;
+  background-color: #fff;
+  color: #000;
+}
+
+.select {
+  margin: 5px 0;
+  font-weight: bold;
   text-transform: uppercase;
+  
 }
 
-#logo {
+
+/*.figure-up:after{
+  border-left: 2px solid #fff;  
+}
+
+.figure-up:before{
+  border-top: 2px solid #fff;  
+}
+
+/*#logo {
   display: flex;
   display: -webkit-flex;
   display: -moz-flex;
@@ -60,17 +356,17 @@ ul {
 .box-flex > h1,
 .box-flex > h4 {
   margin: auto;
-}
+}*/
 /*Общие для меню*/
 /*Главное меню*/
-header > nav {
+/*header > nav {
   display: flex;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   margin: auto 25pt;
 }
-#main {
+/*#main {
   display: flex;
   display: -webkit-flex;
   display: -moz-flex;
@@ -82,13 +378,13 @@ header > nav {
   display: -moz-inline-flex;
   display: -ms-inline-flex;
   padding: 0 5pt;
-  /*padding:1%;*/
+  /*padding:1%;
   background: #fff;
 }
 #main > li > a {
   /*	fs - размер шрифта
 		ccolor - цвет ссылки
-	*/
+	
   font-size: 90%;
   color: #000;
   text-decoration: none;
@@ -99,27 +395,9 @@ header > nav {
 }
 #main > li:hover a {
   color: #fff;
-}
-/*=======================*/
-footer {
-  /*Начальные данные шапки и подвала*/
-  display: flex;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  justify-content: space-between;
-  -webkit-justify-content: space-between;
-  -moz-justify-content: space-between;
-  -ms-justify-content: space-between;
-  width: 100%;
-  height: 10%;
-  background: #2D3E50;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  color: #fff;
-}
-#footer-left,
+}*/
+
+/*#footer-left,
 #footer-right {
   display: inline-flex;
   display: -webkit-inline-flex;
@@ -129,9 +407,68 @@ footer {
   font-size: 18pt;
 }
 
+/*index.html*/
+/* Цвет фона */
+/* Цвет текста */
+/* Размеры */
+/*font-size*/
+/*размер сайта*/
+/*== Примеси, сами не выводятся ==*/
+/* Основная страница */
+/*.mainpage {
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  background: url(../resources/bg_image.jpg) no-repeat;
+  background-size: cover;
+  height: 80%;
+}
+.slogan {
+  font-size: 96pt;
+  margin: auto;
+  color: #fff;
+}
+.mainpage > a {
+  width: 125pt;
+  height: 50pt;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 250%;
+  background: #16A086;
+  color: #fff;
+  font-size: 18pt;
+  text-decoration: none;
+  margin: auto;
+}
+.contact-jump {
+  width: 50pt;
+  height: 50pt;
+  border-radius: 50%;
+  background: #fff;
+  margin: auto;
+}
+.contact-jump > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#bop {
+  width: 10pt;
+  height: 10pt;
+  border-style: solid;
+  border-width: 10pt;
+  border-color: transparent #383433 #383433 transparent;
+  transform: rotate(45deg);
+  margin: 5pt auto;
+}*/
 
 /*Меню Портфолио*/
-.portfolio {
+/*.portfolio {
   background: #ECF0F1;
   display: flex;
   display: -webkit-flex;
@@ -168,7 +505,7 @@ footer {
   display: block;
   /*	fs - размер шрифта
 		ccolor - цвет ссылки
-	*/
+	
   font-size: 125%;
   color: #fff;
   text-decoration: none;
@@ -183,7 +520,7 @@ footer {
 #one-str > section,
 #two-str > section {
   /* 	@w -ширина
-		@h -высота */
+		@h -высота 
   display: inline-block;
   width: 125pt;
   height: 125pt;

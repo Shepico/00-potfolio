@@ -3,37 +3,62 @@
 	<head>
 		<meta charset="utf-8">
 		<title>	Личный сайт-резюме</title>
-		<!--Подключаем Less -->
-		<link rel="stylesheet/less" href="style/style.less" />
-		<link rel="stylesheet/less" href="style/index.less" />        
+		<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>    
+    <link rel="stylesheet" href="css/normalize.min.css">
+		<link rel="stylesheet" href="css/style.css">		
 	</head>
 	<body>
-		<header>
-			<div id="logo">
-				<a href=#><img src="resources/logo.gif" width="80pt" height="80pt"/></a>
-				<div class="box-flex">
-					<h1>Shepico</h1>
-					<h4>Прекращение деятельности всегда приводит за собой вялость</h4>				
-				</div>	
+		<header class="clearfix">
+      <a name="top"></a>
+			<div class="header-logo">
+				<!--<a href="#">-->
+          <img class="logo-img" src="img/logo.gif" width="600" height="600" alt="логотип">
+          <p class="header-slogan">
+            <span>Shepico</span><br>
+            Прекращение деятельности всегда приводит за собой вялость
+          </p>				          
+        <!--</a>-->
 			</div>
-			<nav>
-				<ul class="menu" id="main">
-					<li><a href=#>ГЛАВНАЯ</a></li>  
-					<li><a href="portfolio.html">ПОРТФОЛИО</a></li>  
-					<li><a href="about.html">ОБО МНЕ</a></li>  
+			<nav class="header-menu">
+				<ul class="header-menu-ul">
+			    <li><span>Главная</span></li>  
+					<li><a href="#portfolio">Портфолио</a></li>  
+					<li><a href="about.html">Обо мне</a></li>  
 					<!--<li><a href="contact.html">КОНТАКТЫ</a></li> -->
 				</ul>
 			</nav>
 		</header>
-    <article class="mainpage">
-			<h1 class="slogan">Я ищу работу</h1>
-			<a href="portfolio.html" title="Переход к портфолио">ДАЛЬШЕ</a>
-			<div class="contact-jump"><a href="contact.html" title="Отправить сообщение"><div id="bop"></div></a></div>
-		</article>
-		<footer>
-			<div id="footer-left">&copy Shepico</div>
-			<div id="footer-right">2016</div>
+    <main>
+      <div class="portfolio">
+        <a name="portfolio"></a>
+        <h1>Портфолио</h1>
+        <!--<nav>
+          <ul class="menu" id="portfolio">
+            <li><a href=#>все</a></li>
+            <li><a href=#>web дизайн</a></li>
+            <li><a href=#>flat дизайн</a></li>
+          </ul>
+        </nav>-->
+        <div class="portfolio-items">
+          <section class="item-portfolio"><a href="../m1/index.html" title="Перейти к первому макету"></a></section>
+          <section class="item-portfolio"><a href="../m2/index.html" title="Перейти ко второму макету"></a></section>
+          <section class="item-portfolio"><a href="../m3/index.html" title="Перейти к третьему макету"></a></section>
+          <section class="item-portfolio"></section>
+        <!--</div>
+        <div id="two-str">-->	
+          <section class="item-portfolio"></section>
+          <section class="item-portfolio"></section>
+          <section class="item-portfolio"></section>
+          <section class="item-portfolio"></section>
+        </div>	
+      </div>      
+    </main>
+		<footer class="clearfix">
+			<p class="footer-copyright">
+        &copy Shepico <b>2016</b>
+      </p>
+			<div class="footer-up"><a href="#top"><div class="figure-up"></div></a></div>
 		</footer>
-    <script src="lessjs/less.js"></script>
+    
 	</body>
 </html>
